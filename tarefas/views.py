@@ -1,8 +1,14 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+
+frase=("Adiciionar")
 
 def home(request):
     return render(request, 'tarefas/home.html')
 
 def add(request):
     # Logic for adding a task would go here
-    return render(request, 'tarefas/add.html')  # Assuming you have an add.html template
+    return HttpResponse (frase)
+
+def adicionar(request):
+    return render(request, 'adicionar/home.html')

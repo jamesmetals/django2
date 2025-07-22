@@ -5,3 +5,13 @@ __pycache__/
 *.sqlite3
 .env
 *.py[cod]
+
+# Arquivos do sistema Windows
+desktop.ini
+Thumbs.db
+*.lnk
+
+# Arquivos do sistema macOS
+.DS_Store
+.AppleDouble
+.LSOverride

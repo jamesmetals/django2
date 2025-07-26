@@ -9,6 +9,3 @@ def home(request):
 def adicionar(request):
     form = TarefaForm()
     return render(request, 'tarefas/adicionar.html', {'form': form})
-
-#def adicionar(request):
- # return render(request, 'adicionar/home.html')

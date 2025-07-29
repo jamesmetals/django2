@@ -6,6 +6,16 @@
     <title>{% block title %}Título Padrão{% endblock %}</title>
 </head>
 <body>
-    {% block corpo %}{% endblock %}
+    <header>
+        <h1>Cabeçario do Site</h1>
+        <nav>           
+                <a href="/tarefas">Home</a>
+                <a href="/tarefas/adicionar">Adicionar Tarefa</a>
+        </nav>
+        <hr>
+    </header>
+    {% block corpo %}
+    
+    {% endblock %}
 </body>
 </html>

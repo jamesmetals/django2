@@ -4,5 +4,24 @@
 
 {%  block corpo %}
 <h2>Bem-vindo à página inicial!</h2>
-<p>Esta é a página inicial do seu aplicativo.</p>
+
+
+{%if tarefas %}
+<ul >
+    {% for tarefa in tarefas %}
+    <li>
+        <a href="{% url 'tarefa' tarefa.id %}">{{ tarefa.titulo }}</a>
+        <strong>
+        {% if tarefa.concluida %}-
+        ( Concluida ) 
+        {% else %} 
+        ( Nao concluida )
+        {% endif %}
+    </strong>
+    </li>
+    {% endfor %}
+    </ul>
+{% else %}
+<p>Nenhuma tarefa encontrada.</p>
+{% endif %}
 {% endblock %}
